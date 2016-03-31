@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -6392,7 +6392,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <part name="C8" library="SparkFun-Passives" deviceset="CAP" device="0805" value="100nF"/>
 <part name="C9" library="SparkFun-Passives" deviceset="CAP" device="0805" value="1uF"/>
 <part name="C10" library="SparkFun-Passives" deviceset="CAP" device="0805" value="100nF"/>
-<part name="J1" library="dp_devices" deviceset="CON_HEADER_PRG_AVR_ICSP" device="-SMD"/>
+<part name="ICSP" library="dp_devices" deviceset="CON_HEADER_PRG_AVR_ICSP" device="-SMD"/>
 <part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="2.2K"/>
 <part name="R7" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="2.2K"/>
@@ -6404,11 +6404,11 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <part name="JP7" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="220"/>
 <part name="R9" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="220"/>
-<part name="LED1" library="led" deviceset="LED" device="SML0805" value="GREEN"/>
-<part name="LED2" library="led" deviceset="LED" device="SML0805" value="RED"/>
+<part name="LED1" library="led" deviceset="LED" device="SML0805" value="GR"/>
+<part name="LED2" library="led" deviceset="LED" device="SML0805" value="RD"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="NASA Parts Lib" deviceset="BU2032SM-G" device="" value="3V"/>
-<part name="LED3" library="led" deviceset="LED" device="SML0805" value="BLUE"/>
+<part name="LED3" library="led" deviceset="LED" device="SML0805" value="BL"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="220"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SMA"/>
@@ -6418,7 +6418,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <attribute name="DESIGNER" value="Tim Vrakas"/>
 <attribute name="VERSION" value="2"/>
 </part>
-<part name="SW1" library="SparkFun-Electromechanical" deviceset="SWITCH_SPST_4_PIN" device=""/>
+<part name="SHUTDOWN" library="SparkFun-Electromechanical" deviceset="SWITCH_SPST_4_PIN" device=""/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
@@ -6475,7 +6475,7 @@ VCC: 3.3V</text>
 <instance part="GND5" gate="1" x="106.68" y="5.08"/>
 <instance part="C7" gate="G$1" x="83.82" y="12.7"/>
 <instance part="C8" gate="G$1" x="91.44" y="12.7"/>
-<instance part="J1" gate="J" x="33.02" y="17.78"/>
+<instance part="ICSP" gate="J" x="33.02" y="17.78"/>
 <instance part="R5" gate="G$1" x="134.62" y="147.32" rot="R90"/>
 <instance part="R6" gate="G$1" x="231.14" y="149.86" rot="R90"/>
 <instance part="R7" gate="G$1" x="223.52" y="147.32" rot="R90"/>
@@ -6614,7 +6614,7 @@ VCC: 3.3V</text>
 <junction x="106.68" y="10.16"/>
 </segment>
 <segment>
-<pinref part="J1" gate="J" pin="GND"/>
+<pinref part="ICSP" gate="J" pin="GND"/>
 <wire x1="40.64" y1="15.24" x2="48.26" y2="15.24" width="0.1524" layer="91"/>
 <label x="45.72" y="15.24" size="1.778" layer="95"/>
 </segment>
@@ -6644,7 +6644,7 @@ VCC: 3.3V</text>
 <label x="25.4" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="J" pin="RST"/>
+<pinref part="ICSP" gate="J" pin="RST"/>
 <wire x1="25.4" y1="15.24" x2="17.78" y2="15.24" width="0.1524" layer="91"/>
 <label x="15.24" y="15.24" size="1.778" layer="95"/>
 </segment>
@@ -6686,14 +6686,14 @@ VCC: 3.3V</text>
 <junction x="91.44" y="17.78"/>
 </segment>
 <segment>
-<pinref part="J1" gate="J" pin="+V"/>
+<pinref part="ICSP" gate="J" pin="+V"/>
 <wire x1="40.64" y1="20.32" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
 <label x="45.72" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="J1" gate="J" pin="MISO"/>
+<pinref part="ICSP" gate="J" pin="MISO"/>
 <wire x1="25.4" y1="20.32" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
 <label x="15.24" y="20.32" size="1.778" layer="95"/>
 </segment>
@@ -6705,7 +6705,7 @@ VCC: 3.3V</text>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="J1" gate="J" pin="SCK"/>
+<pinref part="ICSP" gate="J" pin="SCK"/>
 <wire x1="25.4" y1="17.78" x2="17.78" y2="17.78" width="0.1524" layer="91"/>
 <label x="15.24" y="17.78" size="1.778" layer="95"/>
 </segment>
@@ -6717,7 +6717,7 @@ VCC: 3.3V</text>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="J1" gate="J" pin="MOSI"/>
+<pinref part="ICSP" gate="J" pin="MOSI"/>
 <wire x1="40.64" y1="17.78" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
 <label x="45.72" y="17.78" size="1.778" layer="95"/>
 </segment>
@@ -6922,7 +6922,7 @@ VCC: 3.3V</text>
 <instance part="LED1" gate="G$1" x="114.3" y="172.72" rot="R90"/>
 <instance part="LED2" gate="G$1" x="114.3" y="162.56" rot="R90"/>
 <instance part="GND6" gate="1" x="127" y="165.1"/>
-<instance part="SW1" gate="G$1" x="177.8" y="157.48"/>
+<instance part="SHUTDOWN" gate="G$1" x="177.8" y="157.48"/>
 <instance part="R2" gate="G$1" x="167.64" y="162.56" rot="R270"/>
 <instance part="GND9" gate="1" x="193.04" y="149.86"/>
 <instance part="JP1" gate="G$1" x="109.22" y="139.7" rot="R180"/>
@@ -6985,11 +6985,11 @@ VCC: 3.3V</text>
 <junction x="121.92" y="167.64"/>
 </segment>
 <segment>
-<pinref part="SW1" gate="G$1" pin="3"/>
+<pinref part="SHUTDOWN" gate="G$1" pin="3"/>
 <wire x1="182.88" y1="157.48" x2="185.42" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="157.48" x2="193.04" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="157.48" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="G$1" pin="4"/>
+<pinref part="SHUTDOWN" gate="G$1" pin="4"/>
 <wire x1="182.88" y1="154.94" x2="185.42" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="154.94" x2="185.42" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
@@ -7066,14 +7066,14 @@ VCC: 3.3V</text>
 </net>
 <net name="PWRBTN" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="1"/>
+<pinref part="SHUTDOWN" gate="G$1" pin="1"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="167.64" y1="157.48" x2="170.18" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="157.48" x2="172.72" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="157.48" x2="154.94" y2="157.48" width="0.1524" layer="91"/>
 <label x="152.4" y="157.48" size="1.778" layer="95"/>
 <junction x="167.64" y="157.48"/>
-<pinref part="SW1" gate="G$1" pin="2"/>
+<pinref part="SHUTDOWN" gate="G$1" pin="2"/>
 <wire x1="170.18" y1="154.94" x2="172.72" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="154.94" x2="170.18" y2="157.48" width="0.1524" layer="91"/>
 <junction x="170.18" y="157.48"/>
@@ -7109,11 +7109,10 @@ VCC: 3.3V</text>
 <approved hash="113,1,139.023,80.2047,JP3,,,,,"/>
 <approved hash="113,1,154.263,80.2047,JP4,,,,,"/>
 <approved hash="113,1,154.263,64.9647,JP5,,,,,"/>
-<approved hash="113,1,169.503,64.9647,JP6,,,,,"/>
 <approved hash="113,1,169.503,80.2047,JP7,,,,,"/>
 <approved hash="113,2,24.9132,160.02,D1,,,,,"/>
 <approved hash="113,2,36.83,166.378,S1,,,,,"/>
-<approved hash="113,2,177.8,159.631,SW1,,,,,"/>
+<approved hash="113,2,178.676,159.631,SHUTDOWN,,,,,"/>
 </errors>
 </schematic>
 </drawing>
